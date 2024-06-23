@@ -5,8 +5,10 @@ comments: true
 title: "Enter in a Brave New Wrold"
 excerpt: "To my knowledge, Not many people know how this works, and neither do I. I am just happy that it works"
 date:   2024-06-23 09:00:00
-mathjax: false
+#mathjax: false
 ---
+
+### Headinh here
 
 <style>
 .post-header h1 {
