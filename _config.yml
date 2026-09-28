@@ -1,11 +1,10 @@
 # Site settings
 title: Enrico Tranquillini  
-email:  
-description: "Musings of a Computer Scientist."
+email: enrico.tranquillini@mail.polimi.it
+description: "Computer vision engineer building production ML systems and open-source tools."
 baseurl: ""
-url: "http://iltranqui.github.io"
-twitter_username: iltranqui
-github_username:  iltranqui
+url: "https://iltranqui.github.io"
+github_username: iltranqui
 
 # Build settings
 markdown: kramdown

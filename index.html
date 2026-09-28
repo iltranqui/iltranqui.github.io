@@ -1,18 +1,116 @@
 ---
 layout: default
+title: Enrico Tranquillini | Computer Vision Engineer
 ---
+<main class="portfolio-home">
+  <section class="portfolio-hero" aria-labelledby="hero-title">
+    <p class="eyebrow">COMPUTER VISION ENGINEER · ITALY</p>
+    <h1 id="hero-title">Enrico Tranquillini</h1>
+    <p class="hero-role">Computer Vision Engineer · Training &amp; Evaluation Systems</p>
+    <p class="hero-intro">I build production machine-learning systems, from model development and evaluation to fast, reliable inference. My work spans PyTorch, C++/CUDA, computer vision, and edge deployment.</p>
+    <div class="hero-links">
+      <a class="primary-link" href="#work">Selected work <span aria-hidden="true">↘</span></a>
+      <a href="/assets/enrico_cv_online.pdf">Download CV <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/iltranqui" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
 
-<div class="home">
-  
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <br>
-        {{ post.excerpt }}
-      </li>
-    {% endfor %}
-  </ul>
+  <section class="portfolio-section" id="work" aria-labelledby="work-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">01 / WORK</p><h2 id="work-title">Selected work</h2></div>
+      <p>Open-source tools and production systems for computer vision and machine learning.</p>
+    </div>
+    <div class="work-grid">
+      <article class="work-card">
+        <p class="card-kicker">01 / COMPUTER VISION · C++</p>
+        <h3>Darknet</h3>
+        <p>Developing extensions to the Darknet/YOLO framework, including support for segmentation, oriented bounding boxes, and 3D-box inference.</p>
+        <ul class="tag-list"><li>C++</li><li>CUDA</li><li>YOLO</li></ul>
+        <a class="card-link" href="https://codeberg.org/iltranqui/darknet/raptor-fp4" target="_blank" rel="noopener noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="work-card">
+        <p class="card-kicker">02 / INFERENCE · LIBRARY</p>
+        <h3>DarkHelp</h3>
+        <p>A C++ wrapper for Darknet that makes detection, segmentation, and bounding-box workflows easier to integrate into applications.</p>
+        <ul class="tag-list"><li>C++</li><li>Darknet</li><li>API</li></ul>
+        <a class="card-link" href="https://codeberg.org/iltranqui/DarkHelp/raptor-dev" target="_blank" rel="noopener noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="work-card">
+        <p class="card-kicker">03 / DATA TOOLING</p>
+        <h3>DarkMark</h3>
+        <p>An image-annotation tool for building Darknet datasets, extended for segmentation masks and 2D/3D bounding-box annotation.</p>
+        <ul class="tag-list"><li>Annotation</li><li>Computer vision</li><li>Open source</li></ul>
+        <a class="card-link" href="https://codeberg.org/iltranqui/DarkMark/master-dev" target="_blank" rel="noopener noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
+  </section>
 
-</div>
+  <section class="portfolio-section experience-section" id="experience" aria-labelledby="experience-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">02 / CAREER</p><h2 id="experience-title">Experience</h2></div>
+      <p>Machine learning, research, and engineering across Italy, the United States, and China.</p>
+    </div>
+    <div class="timeline">
+      <article class="timeline-row">
+        <span class="timeline-period">2022 — Now</span><span class="timeline-marker" aria-hidden="true"></span>
+        <div class="timeline-content"><h3>Computer Vision Engineer</h3><p class="timeline-place">Danieli Automation · Buttrio, Italy</p><p class="timeline-summary">Standardized model development and deployment, built annotation and dataset-review tooling, and delivered real-time C++/CUDA inference under 100 ms per frame.</p></div>
+      </article>
+      <article class="timeline-row">
+        <span class="timeline-period">2019</span><span class="timeline-marker" aria-hidden="true"></span>
+        <div class="timeline-content"><h3>Visiting Researcher</h3><p class="timeline-place">UC Irvine · California, USA</p><p class="timeline-summary">Analyzed drone-to-ground-station communication and helped reduce multi-hop latency by 17%.</p></div>
+      </article>
+      <article class="timeline-row">
+        <span class="timeline-period">2018 — 2019</span><span class="timeline-marker" aria-hidden="true"></span>
+        <div class="timeline-content"><h3>Junior Manufacturing Engineer Intern</h3><p class="timeline-place">Jabil · Shanghai, China</p><p class="timeline-summary">Supported quality assurance on SMT production lines, identifying process defects during production.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="portfolio-section project-list-section" id="projects" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">03 / TOOLKIT</p><h2 id="projects-title">What I work with</h2></div>
+      <p>Systems-oriented ML, with a focus on practical deployment and evaluation.</p>
+    </div>
+    <dl class="skills-list">
+      <div><dt>Machine learning</dt><dd>PyTorch, TensorFlow, Lightning, Scikit-learn, ONNX Runtime, MLflow</dd></div>
+      <div><dt>Systems &amp; deployment</dt><dd>C++, CUDA, Docker, CI/CD, Azure, edge inference</dd></div>
+      <div><dt>Computer vision</dt><dd>OpenCV, YOLO, real-time inference, dataset tooling</dd></div>
+      <div><dt>Languages</dt><dd>Python, C++, CUDA, Rust, C#</dd></div>
+    </dl>
+  </section>
+
+  <section class="about-band" id="about" aria-labelledby="about-title">
+    <div class="about-grid">
+      <div><p class="eyebrow">04 / ABOUT</p><h2 id="about-title">Background</h2></div>
+      <div class="about-copy">
+        <p>I’m an Italian computer vision engineer based in Buttrio. I work on the full path from model training and evaluation to production inference.</p>
+        <p>I studied Automation and Control Engineering at Politecnico di Milano and Computer Science and Engineering at Tongji University through the Politong double-degree programme. I’m fluent in Italian and English, with basic French.</p>
+        <p class="about-note">More about my ideas and learning in <a href="/about/">About</a> and the <a href="/writing/">writing archive</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-section writing-section" id="writing" aria-labelledby="writing-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">05 / NOTES</p><h2 id="writing-title">Writing</h2></div>
+      <p>Notes and reflections from the blog.</p>
+    </div>
+    <ul class="writing-list">
+      {% for post in site.posts limit:3 %}
+      <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><span>{{ post.excerpt | strip_html | truncate: 130 }}</span></li>
+      {% endfor %}
+    </ul>
+    <p class="archive-link"><a href="/writing/">All writing <span aria-hidden="true">↗</span></a></p>
+  </section>
+
+  <section class="contact-section" id="contact" aria-labelledby="contact-title">
+    <p class="eyebrow">06 / CONTACT</p>
+    <h2 id="contact-title">Get in touch</h2>
+    <p>For machine-learning work, open-source collaboration, or a conversation.</p>
+    <div class="contact-links">
+      <a href="mailto:enrico.tranquillini@mail.polimi.it">Email <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/iltranqui" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="https://codeberg.org/iltranqui" target="_blank" rel="noopener noreferrer">Codeberg <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</main>

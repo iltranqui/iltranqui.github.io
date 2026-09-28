@@ -6,8 +6,6 @@ excerpt: "Welcome Reader to my first post and to mt blog. Where the mind can rea
 date:   2024-06-23 09:00:00
 ---
 
-### Heading here
-
 <style>
 .post-header h1 {
     font-size: 35px;
@@ -17,22 +15,31 @@ date:   2024-06-23 09:00:00
     background-color: #fcfcfc;
     font-size: 13px; /* make code smaller for this post... */
 }
-.resized-image {
-    width: 300px; /* or any desired width */
-    height: auto; /* maintains aspect ratio */
+.post-figure {
+    margin: 24px auto;
+    max-width: 600px;
+    text-align: center;
 }
-.image-annotation-intro {
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
-    padding: 5px; /* some padding around the text */
+.post-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.post-figure figcaption {
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+    font-style: italic;
 }
 </style>
 
 From here everything is new and avaiable. le vie della rete sono infinite: :)
 
-<div class="image-container" style="position: relative; text-align: center;">
-    <img src='/assets/ghostintheshell.png' class="resized-image">
-    <p class="image-annotation-intro" style="position: absolute; top: 20px; left: 0; width: 100%; color: white; font-size: 20px;">Ghost in the Shell</p>
-</div>
+<figure class="post-figure">
+    <img src="/assets/ghostintheshell.png" alt="A still from Ghost in the Shell">
+    <figcaption>Ghost in the Shell</figcaption>
+</figure>
 
 Questo è l'inizio di un nuovo capitale ed una nuovo contenuto che entra nel mondo. Non so come e cosa accadrà in questa pagine ma almeno adess sono contento di avere una strumento in cui scrivere e condividere le mie idee, non direttamente solo a voce.
 A chiunque legga questo post, grazie per essere qui. Se sei finito in questo angolo dell'internet per qualsiasi motivo sei il benvenuto. Ora adesso a capire come mettere una immagine qua
