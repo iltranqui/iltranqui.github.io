@@ -12,7 +12,8 @@ date:   2024-06-23 09:00:00
 }
 .post pre,
 .post code {
-    background-color: #fcfcfc;
+    background-color: var(--surface);
+    color: var(--ink);
     font-size: 13px; /* make code smaller for this post... */
 }
 .post-figure {
@@ -28,7 +29,7 @@ date:   2024-06-23 09:00:00
 }
 .post-figure figcaption {
     margin-top: 8px;
-    color: #666;
+    color: var(--muted);
     font-size: 14px;
     font-style: italic;
 }
@@ -37,7 +38,7 @@ date:   2024-06-23 09:00:00
 From here everything is new and avaiable. le vie della rete sono infinite: :)
 
 <figure class="post-figure">
-    <img src="/assets/ghostintheshell.png" alt="A still from Ghost in the Shell">
+    <img src="/assets/ghostintheshell.jpg" alt="A still from Ghost in the Shell">
     <figcaption>Ghost in the Shell</figcaption>
 </figure>
 

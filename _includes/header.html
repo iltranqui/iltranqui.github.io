@@ -18,31 +18,79 @@
       </button>
       <div class="trigger" id="site-navigation">
         <a class="page-link" href="{{ site.baseurl }}/#work">Work</a>
+        <a class="page-link" href="{{ site.baseurl }}/projects/">Projects</a>
         <a class="page-link" href="{{ site.baseurl }}/#experience">Experience</a>
         <a class="page-link" href="{{ site.baseurl }}/#projects">Skills</a>
         <a class="page-link" href="{{ site.baseurl }}/about/">About</a>
         <a class="page-link" href="{{ site.baseurl }}/writing/">Writing</a>
         <a class="page-link" href="{{ site.baseurl }}/#contact">Contact</a>
       </div>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+        <span aria-hidden="true">☾</span>
+      </button>
     </nav>
   </div>
   <script>
     (function () {
-      var toggle = document.querySelector('.menu-icon');
-      var navigation = document.querySelector('#site-navigation');
-      if (!toggle || !navigation) return;
-      toggle.addEventListener('click', function () {
-        var isOpen = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!isOpen));
-        toggle.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
-        navigation.classList.toggle('is-open', !isOpen);
-      });
-      navigation.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          toggle.setAttribute('aria-expanded', 'false');
-          toggle.setAttribute('aria-label', 'Open navigation');
-          navigation.classList.remove('is-open');
+      var themeRoot = document.documentElement;
+      var themePalettes = {
+        light: { page: '#f7f9fa', surface: '#ffffff', subtle: '#edf1f3', ink: '#17212a', muted: '#52616c', line: '#d5dee3', accent: '#435f73', deep: '#243746' },
+        dark: { page: '#101820', surface: '#19242d', subtle: '#1c2a34', ink: '#edf1f2', muted: '#acbbc3', line: '#364954', accent: '#a4becc', deep: '#243746' }
+      };
+      function applyTheme(theme) {
+        theme = theme === 'dark' ? 'dark' : 'light';
+        themeRoot.dataset.theme = theme;
+        themeRoot.style.colorScheme = theme;
+        if (document.body) document.body.dataset.theme = theme;
+        Object.keys(themePalettes[theme]).forEach(function (name) {
+          themeRoot.style.setProperty('--' + name, themePalettes[theme][name]);
         });
+      }
+      applyTheme(themeRoot.dataset.theme);
+
+      var menuToggle = document.querySelector('.menu-icon');
+      var navigation = document.querySelector('#site-navigation');
+
+      if (menuToggle && navigation) {
+        menuToggle.addEventListener('click', function () {
+          var isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', String(!isOpen));
+          menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+          navigation.classList.toggle('is-open', !isOpen);
+        });
+        navigation.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open navigation');
+            navigation.classList.remove('is-open');
+          });
+        });
+      }
+
+      var themeToggle = document.querySelector('.theme-toggle');
+      if (!themeToggle) return;
+      var themeIcon = themeToggle.querySelector('span');
+
+      function updateThemeButton() {
+        var isDark = document.documentElement.dataset.theme === 'dark';
+        var label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+        themeToggle.setAttribute('aria-label', label);
+        themeToggle.setAttribute('title', label);
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        if (themeIcon) themeIcon.textContent = isDark ? '☀' : '☾';
+      }
+
+      updateThemeButton();
+      themeToggle.addEventListener('click', function () {
+        var currentTheme = document.documentElement.dataset.theme;
+        var nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(nextTheme);
+        try {
+          localStorage.setItem('portfolio-theme', nextTheme);
+        } catch (error) {
+          // Theme switching still works if browser storage is unavailable.
+        }
+        updateThemeButton();
       });
     }());
   </script>
