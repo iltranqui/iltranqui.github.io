@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Enrico Tranquillini | Computer Vision Engineer
+alt: /it/
 ---
 <main class="portfolio-home">
   <section class="portfolio-hero" aria-labelledby="hero-title">
@@ -97,7 +98,8 @@ title: Enrico Tranquillini | Computer Vision Engineer
       <p>Notes and reflections from the blog.</p>
     </div>
     <ul class="writing-list">
-      {% for post in site.posts limit:3 %}
+      {% assign en_posts = site.posts | where: "lang", "en" %}
+      {% for post in en_posts limit:3 %}
       <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><span>{{ post.excerpt | strip_html | truncate: 130 }}</span></li>
       {% endfor %}
     </ul>

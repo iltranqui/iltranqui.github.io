@@ -583,3 +583,5 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 
+.site-nav .lang-switch { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; height: 34px; padding: 0 8px; border: 1px solid var(--line); border-radius: 17px; color: var(--ink); font-size: 12px; font-weight: 800; letter-spacing: .06em; text-decoration: none; }
+.site-nav .lang-switch:hover { border-color: var(--accent); color: var(--accent); }
