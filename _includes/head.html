@@ -3,7 +3,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ t.desc }}{% endif %}">
+    {% if page.alt %}<link rel="alternate" hreflang="{% if page.lang == 'it' %}en{% else %}it{% endif %}" href="{{ page.alt | prepend: site.baseurl | prepend: site.url }}">{% endif %}
     <script>
       try {
         document.documentElement.dataset.theme = localStorage.getItem('portfolio-theme') === 'dark' ? 'dark' : 'light';
@@ -18,7 +19,7 @@
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} posts" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/main.css?v=2" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/main.css?v=3" | prepend: site.baseurl }}">
 
     <!-- Google Analytics -->
     <script>

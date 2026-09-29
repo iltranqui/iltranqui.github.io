@@ -1,0 +1,46 @@
+en:
+  html_lang: en
+  prefix: ""
+  skip: Skip to content
+  desc: "Computer vision engineer building production ML systems and open-source tools."
+  nav_work: Work
+  nav_projects: Projects
+  nav_experience: Experience
+  nav_skills: Skills
+  nav_about: About
+  nav_writing: Writing
+  nav_contact: Contact
+  open_nav: Open navigation
+  close_nav: Close navigation
+  to_dark: Switch to dark mode
+  to_light: Switch to light mode
+  switch_label: Italiano
+  switch_title: Leggi questa pagina in italiano
+  switch_code: IT
+  email: Email
+  footer_desc: "Computer vision engineer building production ML systems and open-source tools."
+  date_fmt: "%b %-d, %Y"
+  read_in_other: Also available in Italian
+it:
+  html_lang: it
+  prefix: /it
+  skip: Vai al contenuto
+  desc: "Ingegnere di computer vision: sistemi di machine learning in produzione e strumenti open source."
+  nav_work: Lavori
+  nav_projects: Progetti
+  nav_experience: Esperienza
+  nav_skills: Competenze
+  nav_about: Chi sono
+  nav_writing: Scritti
+  nav_contact: Contatti
+  open_nav: Apri la navigazione
+  close_nav: Chiudi la navigazione
+  to_dark: Passa alla modalità scura
+  to_light: Passa alla modalità chiara
+  switch_label: English
+  switch_title: Read this page in English
+  switch_code: EN
+  email: Email
+  footer_desc: "Ingegnere di computer vision: sistemi di machine learning in produzione e strumenti open source."
+  date_fmt: "%-d %b %Y"
+  read_in_other: Disponibile anche in inglese
