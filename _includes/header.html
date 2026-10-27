@@ -3,29 +3,30 @@
   <div class="wrap">
 
     <div style="float:left; margin-top:10px; margin-right:10px;">
-    <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-      <img src="/assets/rssicon.svg" width="40">
+    <a href="{% if page.lang == 'it' %}{{ "/it/feed.xml" | prepend: site.baseurl }}{% else %}{{ "/feed.xml" | prepend: site.baseurl }}{% endif %}">
+      <img src="/assets/rssicon.svg" width="40" alt="RSS">
     </a>
     </div>
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title" href="{{ site.baseurl }}{{ t.prefix }}/">{{ site.title }}</a>
     
     <nav class="site-nav">
-      <button class="menu-icon" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation">
+      <button class="menu-icon" type="button" aria-label="{{ t.open_nav }}" aria-expanded="false" aria-controls="site-navigation">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" aria-hidden="true">
           <path fill="currentColor" d="M18 1.5c0 .82-.66 1.5-1.48 1.5H1.48A1.48 1.48 0 0 1 0 1.5C0 .67.66 0 1.48 0h15.04A1.48 1.48 0 0 1 18 1.5zm0 6c0 .82-.66 1.5-1.48 1.5H1.48A1.48 1.48 0 0 1 0 7.5C0 6.67.66 6 1.48 6h15.04A1.48 1.48 0 0 1 18 7.5zm0 6c0 .82-.66 1.5-1.48 1.5H1.48A1.48 1.48 0 0 1 0 13.5c0-.83.66-1.5 1.48-1.5h15.04A1.48 1.48 0 0 1 18 13.5z"/>
         </svg>
       </button>
       <div class="trigger" id="site-navigation">
-        <a class="page-link" href="{{ site.baseurl }}/#work">Work</a>
+        <a class="page-link" href="{{ site.baseurl }}{{ t.prefix }}/#work">{{ t.nav_work }}</a>
         <a class="page-link" href="{{ site.baseurl }}/projects/">Projects</a>
-        <a class="page-link" href="{{ site.baseurl }}/#experience">Experience</a>
-        <a class="page-link" href="{{ site.baseurl }}/#projects">Skills</a>
+        <a class="page-link" href="{{ site.baseurl }}{{ t.prefix }}/#experience">{{ t.nav_experience }}</a>
+        <a class="page-link" href="{{ site.baseurl }}{{ t.prefix }}/#projects">{{ t.nav_skills }}</a>
         <a class="page-link" href="{{ site.baseurl }}/about/">About</a>
         <a class="page-link" href="{{ site.baseurl }}/writing/">Writing</a>
-        <a class="page-link" href="{{ site.baseurl }}/#contact">Contact</a>
+        <a class="page-link" href="{{ site.baseurl }}{{ t.prefix }}/#contact">{{ t.nav_contact }}</a>
       </div>
-      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+      <a class="lang-switch" href="{% if page.alt %}{{ page.alt | prepend: site.baseurl }}{% elsif page.lang == 'it' %}{{ site.baseurl }}/{% else %}{{ site.baseurl }}/it/{% endif %}" hreflang="{% if page.lang == 'it' %}en{% else %}it{% endif %}" lang="{% if page.lang == 'it' %}en{% else %}it{% endif %}" title="{{ t.switch_title }}" aria-label="{{ t.switch_title }}">{{ t.switch_code }}</a>
+      <button class="theme-toggle" type="button" aria-label="{{ t.to_dark }}" aria-pressed="false" title="{{ t.to_dark }}">
         <span aria-hidden="true">☾</span>
       </button>
     </nav>
@@ -55,13 +56,13 @@
         menuToggle.addEventListener('click', function () {
           var isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
           menuToggle.setAttribute('aria-expanded', String(!isOpen));
-          menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+          menuToggle.setAttribute('aria-label', isOpen ? {{ t.open_nav | jsonify }} : {{ t.close_nav | jsonify }});
           navigation.classList.toggle('is-open', !isOpen);
         });
         navigation.querySelectorAll('a').forEach(function (link) {
           link.addEventListener('click', function () {
             menuToggle.setAttribute('aria-expanded', 'false');
-            menuToggle.setAttribute('aria-label', 'Open navigation');
+            menuToggle.setAttribute('aria-label', {{ t.open_nav | jsonify }});
             navigation.classList.remove('is-open');
           });
         });
@@ -73,7 +74,7 @@
 
       function updateThemeButton() {
         var isDark = document.documentElement.dataset.theme === 'dark';
-        var label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+        var label = isDark ? {{ t.to_light | jsonify }} : {{ t.to_dark | jsonify }};
         themeToggle.setAttribute('aria-label', label);
         themeToggle.setAttribute('title', label);
         themeToggle.setAttribute('aria-pressed', String(isDark));

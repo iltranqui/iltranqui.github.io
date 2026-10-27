@@ -1,9 +1,12 @@
 ---
 layout: post
 discussion: true
-title: "Enter in a Brave New World"
-excerpt: "Welcome Reader to my first post and to mt blog. Where the mind can reall start explaining itself and it's ideas. "
+title: "Entra in un mondo nuovo"
+excerpt: "Benvenuto, lettore, al mio primo post e al mio blog: un luogo dove la mente può iniziare a raccontare se stessa e le proprie idee."
 date:   2024-06-23 09:00:00
+lang: it
+permalink: /it/writing/inizio/
+alt: /writing/beginning/
 ---
 
 <style>
@@ -35,10 +38,10 @@ date:   2024-06-23 09:00:00
 }
 </style>
 
-From here everything is new and avaiable. le vie della rete sono infinite: :)
+Da qui in poi tutto è nuovo e disponibile. Le vie della rete sono infinite :)
 
 <figure class="post-figure">
-    <img src="/assets/ghostintheshell.jpg" alt="A still from Ghost in the Shell">
+    <img src="/assets/ghostintheshell.jpg" alt="Un fotogramma da Ghost in the Shell">
     <figcaption>Ghost in the Shell</figcaption>
 </figure>
 

@@ -2,6 +2,7 @@
 layout: post
 title: "Kaggle Book — 3D Detection"
 permalink: /projects/kaggle-book-3d-detection/
+alt: /it/projects/kaggle-book-3d-detection/
 excerpt: "A computer-vision experiment annotating a real-world book with 3D cuboid keypoints and 2D boxes."
 ---
 

@@ -2,8 +2,11 @@
 layout: post
 discussion: true
 title: "Identità"
-excerpt: "Chis sono io e che cosa mi rende unico ?"
+excerpt: "Chi sono io e che cosa mi rende unico?"
 date:   2024-07-27 09:00:00
+lang: it
+permalink: /it/writing/identita/
+alt: /writing/identity/
 ---
 
 ### Heading here
@@ -61,6 +64,6 @@ Osservazione banale che solitamente ci si dimentica nella nostra vita quotidiana
     allowfullscreen>
 </iframe>
 
-But it ability to choose, whatever you think it is true that makes us human. There is no book or teacher to give you the answer or to show you the path. CHose your own way. Do not follow me or anyone else. 
+Ma è la capacità di scegliere, qualunque cosa tu pensi sia vero, a renderci umani. Non esiste un libro o un maestro che ti dia la risposta o ti mostri la strada. Scegli la tua via. Non seguire me né nessun altro. 
 
 é seguendo questo ragionamento o modo di pensare che inzio a pensare per te. (ALmeno questo è stato per me). Prima da bambino non sai come gira il mondo per cui ti fai affidamento alle persona intorno a te: Mamma, papà, amici etc. Forse ti va bene, ma ad un certo punto ti rendi conto o senti che ci sono tante cosse che " non ti vanno bene " , come capita ad un sacco di persone. Allora decidi di cambiare e di fare le cose alla tua maniera. Questo comporta andare forse di andare contro le aspettative di un sacco di persone, ma va bene così ! Ovviamente questa cose vanno fatte in maniera "calibrata" ovvero senza fare azione che potrebbero causare dolore fisico o pesanti. Questo devo scriverlo meglio .... Accidenti però devo andare. Vediamo se carica e funziona per il momento. 

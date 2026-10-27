@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<div class="post">
+{% assign lang = page.lang | default: "en" %}{% assign t = site.data.i18n[lang] %}<div class="post">
 
   <header class="post-header">
     <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="meta">{% if page.date %}{{ page.date | date: t.date_fmt }}{% endif %}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}{% if page.alt %} • <a href="{{ page.alt | prepend: site.baseurl }}" hreflang="{% if page.lang == 'it' %}en{% else %}it{% endif %}">{{ t.switch_label }}</a>{% endif %}</p>
   </header>
 
   <article class="post-content">

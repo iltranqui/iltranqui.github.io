@@ -15,3 +15,9 @@ kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
+
+defaults:
+  - scope: {path: ""}
+    values: {lang: en}
+  - scope: {path: "it"}
+    values: {lang: it}

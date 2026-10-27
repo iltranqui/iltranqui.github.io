@@ -2,6 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
+alt: /it/projects/
 ---
 
 <p class="writing-page-intro">Selected computer-vision experiments and project work.</p>
